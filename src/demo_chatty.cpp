@@ -92,3 +92,25 @@ void demo_chatty6(int n, bool reserve = true) {
   }
   Rcout << "\nFin de la fonction\n";
 }
+
+//[[Rcpp::export]]
+void demo_chatty7(int n) {
+  std::vector<chatty> V;
+  V.reserve(n);
+  for(int i = 0; i < n; i++) {
+    V.emplace_back(i, "arf");
+  }
+
+  Rcout << "\n\nParcourir le vecteur avec auto x \n";
+  for(auto x : V) {
+    std::string s = x.me();
+  }
+
+  Rcout << "\n\nParcourir le vecteur avec auto & x \n";
+  for(auto & x : V) {
+    std::string s = x.me();
+  }
+
+  Rcout << "\nFin de la fonction\n";
+
+}

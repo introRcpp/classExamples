@@ -67,6 +67,16 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// demo_chatty7
+void demo_chatty7(int n);
+RcppExport SEXP _classExamples_demo_chatty7(SEXP nSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    demo_chatty7(n);
+    return R_NilValue;
+END_RCPP
+}
 // demo_derivation_1
 List demo_derivation_1(NumericVector x);
 RcppExport SEXP _classExamples_demo_derivation_1(SEXP xSEXP) {
@@ -97,6 +107,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_classExamples_demo_chatty4", (DL_FUNC) &_classExamples_demo_chatty4, 2},
     {"_classExamples_demo_chatty5", (DL_FUNC) &_classExamples_demo_chatty5, 2},
     {"_classExamples_demo_chatty6", (DL_FUNC) &_classExamples_demo_chatty6, 2},
+    {"_classExamples_demo_chatty7", (DL_FUNC) &_classExamples_demo_chatty7, 1},
     {"_classExamples_demo_derivation_1", (DL_FUNC) &_classExamples_demo_derivation_1, 1},
     {"_classExamples_demo_derivation_2", (DL_FUNC) &_classExamples_demo_derivation_2, 1},
     {NULL, NULL, 0}

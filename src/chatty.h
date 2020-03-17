@@ -2,11 +2,11 @@
 #include <iostream>
 
 class chatty {
-  private:
+private:
   int x;
   std::string s;
 
-  public:
+public:
   std::string me() {
     return "(" + s + "," + std::to_string(x) + ")";
   }
@@ -32,7 +32,7 @@ class chatty {
     Rcpp::Rcout << me() << " : ";
     x = A.x;
     s = A.s + "*";
-    Rcpp::Rcout << "assigné " << me() << "\n";
+    Rcpp::Rcout << "assigné à " << me() << "\n";
     return *this;
   }
 

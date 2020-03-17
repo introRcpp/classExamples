@@ -25,6 +25,10 @@ demo_chatty6 <- function(n, reserve = TRUE) {
     invisible(.Call('_classExamples_demo_chatty6', PACKAGE = 'classExamples', n, reserve))
 }
 
+demo_chatty7 <- function(n) {
+    invisible(.Call('_classExamples_demo_chatty7', PACKAGE = 'classExamples', n))
+}
+
 demo_derivation_1 <- function(x) {
     .Call('_classExamples_demo_derivation_1', PACKAGE = 'classExamples', x)
 }

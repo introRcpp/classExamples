@@ -24,14 +24,15 @@ List demo_derivation_1(NumericVector x) {
   }
 
   List L;
-  L["f(x)"] = wrap(fx);
-  L["df(x)"] = wrap(dfx);
+  L["f(x)"] = fx;
+  L["df(x)"] = dfx;
   return L;
 }
 
 double sisi(double x) {
   return sin(x);
 }
+
 //[[Rcpp::export]]
 List demo_derivation_2(NumericVector x) {
   // dum f;
@@ -46,7 +47,7 @@ List demo_derivation_2(NumericVector x) {
   }
 
   List L;
-  L["f(x)"] = wrap(fx);
-  L["df(x)"] = wrap(dfx);
+  L["f(x)"] = fx;
+  L["df(x)"] = dfx;
   return L;
 }
